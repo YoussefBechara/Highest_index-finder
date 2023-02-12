@@ -1,0 +1,12 @@
+alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+def high_index_finder(string):
+    indexes, letters = [] , []
+    for i in range(len(string)):
+        if string[i] in alphabet:
+            for c in range(len(alphabet)):
+                if string[i] == alphabet[c]:
+                    letters.append(string[i])
+                    indexes.append(c+1)
+    letter , index = sorted(letters) , sorted(indexes)
+    print(f'{index[-1]}{letter[-1]}')
+high_index_finder('youssef')
